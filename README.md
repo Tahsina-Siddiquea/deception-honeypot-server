@@ -1,26 +1,32 @@
-# Honeypot Intrusion Detection System
+# Deception Honeypot Server
 
-## Overview
+## Project Introduction
 
-The Honeypot Intrusion Detection System is a defensive cybersecurity simulation project designed to monitor, capture, and analyze malicious connection attempts targeting network services.
+The Deception Honeypot Server is a defensive cybersecurity simulation designed to observe, capture, and analyze malicious authentication attempts in a controlled environment.
 
-This project emulates a vulnerable SSH-like service to attract attackers, log their activities, and generate actionable security intelligence.
-It demonstrates real-world blue-team concepts such as attack surface exposure, credential harvesting detection, brute-force identification, and incident reporting.
+This project recreates the behavioral dynamics of exposed network services by deploying a deceptive authentication endpoint that attracts unauthorized access attempts. By logging attacker interactions and analyzing credential usage patterns, the system provides practical insights into real-world intrusion strategies.
 
-The system provides hands-on experience in threat monitoring, intrusion detection engineering, and secure defensive architecture design.
+The implementation reflects foundational concepts used in modern security operations centers (SOC), threat research labs, and incident response workflows.
+
+## Core Objectives
+
+* Simulate exposed authentication services to attract malicious actors
+* Monitor and record unauthorized connection attempts
+* Capture credential-based attack patterns
+* Identify brute-force attack behaviour
+* Generate structured attack intelligence reports
+* Demonstrate practical defensive cybersecurity engineering
 
 
-## Key Features
+## Functional Highlights
 
-* Simulated SSH service honeypot
-* Real-time attacker connection monitoring
-* Credential capture and logging
-* Brute-force attack detection using attempt thresholds
-* Multi-threaded client handling
-* Security event timestamp tracking
-* Automated attack intelligence reporting
-* IP-based attack statistics generation
-* Lightweight and portable deployment
+* TCP-based honeypot server simulating SSH authentication
+* Concurrent attacker handling using multi-threading
+* Real-time credential capture and event logging
+* Timestamped attack session tracking
+* Frequency-based brute-force detection mechanism
+* Automated threat statistics generation
+* Lightweight architecture suitable for lab deployment
 
 
 ## System Architecture
@@ -102,47 +108,45 @@ Possible brute-force attackers:
 192.168.1.50 → 10 attempts
 ```
 
+## Performance Considerations
 
-## Performance Characteristics
+The system is designed to operate efficiently in resource-constrained environments:
 
-* Lightweight network monitoring architecture
-* Efficient multi-threaded connection handling
-* Minimal CPU and memory consumption
-* Suitable for local lab environments and security training setups
-
-
-## Security & Ethical Use
-
-This project is developed strictly for:
-
-* cybersecurity education
-* defensive security experimentation
-* intrusion detection learning
-* threat intelligence practice
-
-The honeypot must only be deployed in controlled environments and authorized lab networks.
-
-Unauthorized deployment on public systems or production networks is strongly discouraged.
+* Low memory footprint due to minimal state storage
+* Concurrent connection processing through lightweight threading
+* Rapid event logging without heavy external dependencies
+* Suitable for academic security labs and controlled training networks
 
 
-## Learning Objectives
+## Security & Ethical Deployment
 
-This project demonstrates practical skills in:
+This honeypot simulation is intended strictly for:
 
-* Intrusion detection system design
-* Network attack monitoring strategies
-* Threat intelligence collection
-* Secure logging architecture
-* Brute-force detection logic
-* Defensive cybersecurity engineering
+* Cybersecurity education and training
+* Defensive research experimentation
+* Intrusion detection concept validation
+* Academic demonstration of threat monitoring techniques
+
+Deployment must remain within authorized environments to avoid unintended legal or ethical implications.
+
+## Educational Value
+
+Through this project, the following competencies are demonstrated:
+
+* Realistic attack surface simulation
+* Practical intrusion monitoring methodology
+* Defensive programming mindset
+* Security telemetry collection techniques
+* Incident analysis and reporting fundamentals
+* Introduction to threat intelligence engineering
 
 
 ## Author
 
-Developed as part of a hands-on cybersecurity learning initiative focused on real-world defensive security practices and attack simulation environments.
+Developed as part of an independent cybersecurity learning initiative focused on hands-on defensive security engineering and network threat observation techniques.
 
 
 ## License
 
-This project is released for educational and research purposes.
-Use responsibly and only in permitted environments.
+This project is released for educational and research use.
+Users are responsible for ensuring deployment complies with applicable policies and regulations.
